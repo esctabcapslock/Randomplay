@@ -5,3 +5,5 @@ tmp/**
 error.md
 plan.md
 *.mp3.bak
+package-lock.json
+asset/*.txt
