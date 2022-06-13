@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        audio{
+            width: 100%;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <audio controls src="./data/[##audio##]" preload="none"></audio>
+    <output id="out"></output>
+    <script>
+        const audiotag = document.querySelector('audio')
+        const outputtag = document.querySelector('output')
+
+        function totime(x){
+            return `${(x/60)|0}:${ parseFloat(x%60).toFixed(3)}`
+        }
+        setInterval(()=>{
+            outputtag.innerHTML = 
+            `${totime(audiotag.currentTime)} / ${totime(audiotag.duration)}`
+        }, 1000/24)
+        (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+    </script>
+</body>
+</html>

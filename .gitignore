@@ -1,0 +1,7 @@
+node_modules/**
+data/**
+tmp/**
+*.mp3
+error.md
+plan.md
+*.mp3.bak
